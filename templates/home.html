@@ -16,11 +16,7 @@
 	<hl>Predict Heart Disease</hl>
 	   
 	<form action="{{ url_for('predict')}}"method="POST">
-	    <label for="age">Last Name:</label><br>
-		<input type="text" name="name" placeholder="" required="required" /><br>
-	    <label for="age">Patient ID (Number):</label><br>
-		<input type="number" name="id" placeholder="" required="required" /><br>
-		<label for="age">Age (Years):</label><br>
+	  	<label for="age">Age (Years):</label><br>
 		<input type="number" name="age" placeholder="" required="required" /><br>
 		<label for="age">Gender (Male/Female):</label><br>
 		<input type="text" name="gender" placeholder="" required="required" /><br>
