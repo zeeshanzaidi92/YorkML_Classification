@@ -2,7 +2,6 @@ pycaret==2.2
 Flask==2.0.0
 numpy
 pandas
-pickle
 gunicorn
 Jinja2
 certifi
