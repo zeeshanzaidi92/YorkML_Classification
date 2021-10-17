@@ -20,7 +20,7 @@ def predict():
     final = np.array(int_features)
     data_unseen = pd.DataFrame([final], columns = cols)
     prediction = predict_model(model, data=data_unseen, round = 0)
-    prediction = int(prediction.Label[0])
+    prediction = prediction.Label[0]
     return render_template('home.html',pred='Heart Disease {}'.format(prediction))
 
 @app.route('/predict_api',methods=['POST'])
