@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+  <title>Predict Heart Disease</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<link type="text/css" rel="stylesheet" href="static/style.css">
+	
+</head>   
+
+<body>
+ <div class="login">
+ 
+	<hl>Predict Heart Disease</hl>
+	   
+	<form action="{{ url_for('predict')}}"method="POST">
+<table>
+<tr valign="middle">
+	<td align="right">
+		<label for="age">Age:</label>
+	</td>
+	<td align="left">
+		<input type="text" name="age" placeholder="" required="required" />
+	</td>
+</tr>	
+<tr>
+	<td align="right">
+		<label for="Gender">Gender:</label>
+	</td>
+	<td align="left">
+		<select name="Gender" id="Gender">
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td align="right">
+		<label for="Chest_Pain">Chest Pain:</label>
+	</td>
+	<td align="left">
+		<select name="Chest_Pain" id="Gender">
+			<option value="Typical">Typical</option>
+			<option value="Atypical">Atypical</option>
+			<option value="Not Anginal">Not Anginal</option>
+			<option value="Asymptomatic">Asymptomatic</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td align="right">
+		<label for="Blood_Pressure">Blood_Pressure:</label>
+	</td>
+	<td align="left">
+		<input type="text" name="Blood_Pressure" placeholder="" required="required" />
+	</td>
+</tr>
+<tr>
+	<td align="right">
+		<label for="Cholesterol">Cholesterol:</label><br>
+	</td>
+	<td align="left">
+		<input type="text" name="Cholesterol" placeholder="" required="required" />
+
+	</td>
+</tr>
+<tr>
+	<td align="right">
+		<label for="Blood_Sugar">Blood_Sugar:</label><br>
+	</td>
+	<td align="left">
+		<select name="Blood_Sugar" placeholder="" required="required" />
+			<option value="<120mg"><120mg</option>
+			<option value="120mg+">120mg+</option>
+		</select>		
+	</td>
+</tr>
+<tr>
+	<td align="right">
+		<label for="Rest_ECG">Rest ECG:</label>
+	</td>
+	<td align="left">
+		<select name="Rest_ECG" id="Rest_ECG">
+			<option value="Normal">Normal</option>
+			<option value="ST Abnormality">ST Abnormality</option>
+			<option value="LV Abnormality">LV Abnormality</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td align="right">
+		<label for="Max_Heart_Rate">Max Heart Rate:</label>
+	</td>
+	<td align="left">
+		<input type="text" name="Max_Heart_Rate" placeholder="" required="required" />
+	</td>
+</tr>
+<tr>
+	<td align="right">
+		<label for="Exercise_Angina">Exercise Angina:</label>
+	</td>
+	<td align="left">
+		<select name="Exercise_Angina" id="Exercise_Angina">
+			<option value="No">No</option>
+			<option value="Yes">Yes</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td align="right">
+		<label for="ST_Depression">ST Depression:</label>
+	</td>
+	<td align="left">
+		<select name="ST_Depression" id="ST_Depression">
+			<option value="None">None</option>
+			<option value="Low">Low</option>
+			<option value="High">High</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td align="right">
+		<label for="ST_Slope">ST Slope:</label>
+	</td>
+	<td align="left">
+		<select name="ST_Slope" id="ST_Depression">
+			<option value="Flat">Flat</option>
+			<option value="Upslope">Upslope</option>
+			<option value="Downslope">Downslope</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td align="right">
+		<label for="Marked_Vessels">Marked Vessels:</label>
+	</td>
+	<td align="left">
+		<input type="text" name="Marked_Vessels" placeholder="" required="required" />
+	</td>
+</tr>
+<tr>
+	<td align="right">
+		<label for="Thallium">Thallium:</label>
+	</td>
+	<td align="left">
+		<select name="Thallium" id="ST_Depression">
+			<option value="Normal">Normal</option>
+			<option value="Fixed Defect">Fixed Defect</option>
+			<option value="Reversible Defect">Reversible Defect</option>
+		</select>
+	</td>
+</tr>
+</table>
+		<button type="submit" class="btn  btn-primary btn-block btn-large">Predict</button>
+	</form>
+
+   <br>
+   <br>
+    
+ </div>
+ <p>{{pred}}</p>
+
+</body>
+</html>
